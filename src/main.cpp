@@ -1,6 +1,7 @@
 #include <algorithm>
 #include <chrono>
 #include <cstdint>
+#include <execution>
 #include <iostream>
 #include <parallel/algorithm>
 #include <random>
@@ -85,12 +86,46 @@ struct std_sort {
   static std::string name() { return "std"; }
 };
 
+struct par {
+  static constexpr std::execution::parallel_policy e = std::execution::par;
+  static std::string name() { return "std(par)"; }
+};
+
+struct seq {
+  static constexpr std::execution::sequenced_policy e = std::execution::seq;
+  static std::string name() { return "std(seq)"; }
+};
+
+struct par_unseq {
+  static constexpr std::execution::parallel_unsequenced_policy e =
+      std::execution::par_unseq;
+  static std::string name() { return "std(par_unseq)"; }
+};
+
+struct unseq {
+  static constexpr std::execution::unsequenced_policy e = std::execution::unseq;
+  static std::string name() { return "std(unseq)"; }
+};
+
+template <typename exec> //
+struct std_sort_exec {
+  template <typename itorator>               //
+  static void sort(itorator a, itorator b) { //
+    std::sort(exec::e, a, b);
+  }
+  template <typename itorator>                      //
+  static void stable_sort(itorator a, itorator b) { //
+    std::stable_sort(exec::e, a, b);
+  }
+  static std::string name() { return exec::name(); }
+};
+
 template <typename value_type, //
           typename sorter,
           typename generator> //
 void test() {
   size_t min_size = 1 << 10;
-  size_t max_size = 1 << 20;
+  size_t max_size = 1 << 15;
   using clock = std::chrono::high_resolution_clock;
   for (size_t size = min_size; size <= max_size; size <<= 1) {
     generator g;
@@ -119,13 +154,23 @@ void test() {
   }
 }
 
+template <typename sorter> void run_tests() {
+  test<uint32_t, sorter, random_uint32>();
+  test<uint32_t, sorter, few_uint32<8>>();
+  test<std::string, sorter, random_string<>>();
+  test<std::string, sorter, few_strings<8>>();
+}
+
+void test_all() {
+  run_tests<gnu_p_sort>();
+  run_tests<std_sort>();
+  // run_tests<std_sort_exec<seq>>();       // C++17(single-thread, no-SIMD)
+  run_tests<std_sort_exec<par>>();       // C++17(muti-thread)
+  run_tests<std_sort_exec<par_unseq>>(); // C++17(muti-thread and/or SIMD)
+  run_tests<std_sort_exec<unseq>>();     // C++20(SIMD)
+}
+
 int main() {
-  test<uint32_t, gnu_p_sort, random_uint32>();
-  test<uint32_t, std_sort, random_uint32>();
-  test<uint32_t, gnu_p_sort, few_uint32<8>>();
-  test<uint32_t, std_sort, few_uint32<8>>();
-  test<std::string, gnu_p_sort, random_string<>>();
-  test<std::string, std_sort, random_string<>>();
-  test<std::string, gnu_p_sort, few_strings<8>>();
-  test<std::string, std_sort, few_strings<8>>();
+  test_all(); // 練習
+  test_all(); // 本番
 }

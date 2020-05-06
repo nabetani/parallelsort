@@ -19,8 +19,11 @@ set(COMPLIE_OPT -Wall -march=native -fopenmp )
 set(NDEBUG_COMPLIE_OPT -O2)
 set(DEBUG_COMPLIE_OPT -g -O0)
 
+
+set(LINK_DIRS "/usr/local/Cellar/tbb/2020_U1/lib" )
+
 # link options
-set(LINK_OPT -Wall -lpthread -lgomp )
+set(LINK_OPT -Wall -lpthread -lgomp -ltbb)
 set(NDEBUG_LINK_OPT "")
 set(DEBUG_LINK_OPT "")
 
@@ -68,6 +71,11 @@ function(define_build)
   )
   target_include_directories("${TNAME}" PRIVATE
     "src"
+    "/usr/local/Cellar/tbb/2020_U1/include"
+  )
+  target_link_directories( "${TNAME}"
+  PUBLIC
+    ${LINK_DIRS}
   )
   target_link_options( "${TNAME}"
     PUBLIC
