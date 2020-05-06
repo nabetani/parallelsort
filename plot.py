@@ -23,8 +23,9 @@ def marker(k):
   if k=="std(unseq)":
     return ""
 
-def plot1(data):
+def plot(data, sort_type, name):
   fig = pyplot.figure(figsize=SQUARE_20cm)
+  fig.suptitle(name + " sort")
   procs = uniq(data, "proc")
   values = uniq(data, "value")
   print( procs )
@@ -38,13 +39,13 @@ def plot1(data):
     for m in procs:
       rows = [ row for row in data.itertuples() if row.proc==m and row.value==v ]
       x= [ row.size for row in rows ]
-      y= [ row.unstable for row in rows ]
+      y= [ sort_type(row) for row in rows ]
       graph.plot( x, y, label=m, marker=marker(m))
     pyplot.legend()
     graph.grid(b=True, which='major', color='gray', linestyle='-')
-  pyplot.subplots_adjust(top=0.9)
   pyplot.tight_layout()
-  pyplot.savefig('plot1.png')
+  pyplot.subplots_adjust(top=0.9)
+  pyplot.savefig(name+'.png')
 
 def main():
   data= pd.read_csv(
@@ -53,7 +54,8 @@ def main():
     header=None,
     names=['proc', 'value', 'size', 'unstable', 'stable'])
   print( data )
-  plot1(data)
+  plot(data,  (lambda x:x.unstable), "unstable")
+  plot(data,  (lambda x:x.stable), "stable")
 
 
 
