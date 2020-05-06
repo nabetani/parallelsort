@@ -1,0 +1,220 @@
+"gnu_parallel", "random_uint32", 1024, 0.338, 0.432
+"gnu_parallel", "random_uint32", 2048, 1.186, 0.327
+"gnu_parallel", "random_uint32", 4096, 0.367, 0.351
+"gnu_parallel", "random_uint32", 8192, 0.34, 0.308
+"gnu_parallel", "random_uint32", 16384, 0.476, 0.377
+"gnu_parallel", "random_uint32", 32768, 0.59, 0.669
+"gnu_parallel", "random_uint32", 65536, 2.724, 0.992
+"gnu_parallel", "random_uint32", 131072, 6.962, 2.411
+"gnu_parallel", "random_uint32", 262144, 3.687, 3.998
+"gnu_parallel", "random_uint32", 524288, 7.708, 7.88
+"gnu_parallel", "random_uint32", 1048576, 15.5, 20.385
+"gnu_parallel", "few_uint32<8>", 1024, 0.28, 0.27
+"gnu_parallel", "few_uint32<8>", 2048, 0.295, 0.222
+"gnu_parallel", "few_uint32<8>", 4096, 0.226, 0.187
+"gnu_parallel", "few_uint32<8>", 8192, 0.271, 0.227
+"gnu_parallel", "few_uint32<8>", 16384, 0.353, 0.308
+"gnu_parallel", "few_uint32<8>", 32768, 0.409, 0.426
+"gnu_parallel", "few_uint32<8>", 65536, 1.229, 1.324
+"gnu_parallel", "few_uint32<8>", 131072, 1.845, 1.763
+"gnu_parallel", "few_uint32<8>", 262144, 2.04, 2.376
+"gnu_parallel", "few_uint32<8>", 524288, 3.222, 4.447
+"gnu_parallel", "few_uint32<8>", 1048576, 6.957, 8.532
+"gnu_parallel", "random_string<1024>", 1024, 0.653, 0.59
+"gnu_parallel", "random_string<1024>", 2048, 0.956, 0.838
+"gnu_parallel", "random_string<1024>", 4096, 1.971, 1.492
+"gnu_parallel", "random_string<1024>", 8192, 2.571, 2.349
+"gnu_parallel", "random_string<1024>", 16384, 5.768, 5.171
+"gnu_parallel", "random_string<1024>", 32768, 15.834, 14.692
+"gnu_parallel", "random_string<1024>", 65536, 54.665, 56.067
+"gnu_parallel", "random_string<1024>", 131072, 115.298, 126.886
+"gnu_parallel", "random_string<1024>", 262144, 280.096, 249.119
+"gnu_parallel", "random_string<1024>", 524288, 579.633, 569.394
+"gnu_parallel", "random_string<1024>", 1048576, 1281.94, 1301.8
+"gnu_parallel", "few_strings<8, 1024>", 1024, 1.49, 1.669
+"gnu_parallel", "few_strings<8, 1024>", 2048, 1.089, 1.119
+"gnu_parallel", "few_strings<8, 1024>", 4096, 1.561, 1.596
+"gnu_parallel", "few_strings<8, 1024>", 8192, 6.102, 3.353
+"gnu_parallel", "few_strings<8, 1024>", 16384, 11.063, 7.18
+"gnu_parallel", "few_strings<8, 1024>", 32768, 15.566, 16.631
+"gnu_parallel", "few_strings<8, 1024>", 65536, 54.395, 60.876
+"gnu_parallel", "few_strings<8, 1024>", 131072, 144.882, 139.398
+"gnu_parallel", "few_strings<8, 1024>", 262144, 332.243, 353.016
+"gnu_parallel", "few_strings<8, 1024>", 524288, 759.176, 775.764
+"gnu_parallel", "few_strings<8, 1024>", 1048576, 1641.37, 1789.86
+"std", "random_uint32", 1024, 0.034, 0.045
+"std", "random_uint32", 2048, 0.074, 0.09
+"std", "random_uint32", 4096, 0.156, 0.195
+"std", "random_uint32", 8192, 0.342, 0.422
+"std", "random_uint32", 16384, 0.728, 0.911
+"std", "random_uint32", 32768, 1.531, 2.02
+"std", "random_uint32", 65536, 3.266, 4.122
+"std", "random_uint32", 131072, 6.933, 8.771
+"std", "random_uint32", 262144, 14.776, 18.583
+"std", "random_uint32", 524288, 30.886, 39.056
+"std", "random_uint32", 1048576, 65.394, 83.206
+"std", "few_uint32<8>", 1024, 0.018, 0.032
+"std", "few_uint32<8>", 2048, 0.035, 0.058
+"std", "few_uint32<8>", 4096, 0.07, 0.116
+"std", "few_uint32<8>", 8192, 0.144, 0.234
+"std", "few_uint32<8>", 16384, 0.294, 0.489
+"std", "few_uint32<8>", 32768, 0.582, 0.976
+"std", "few_uint32<8>", 65536, 1.374, 2.251
+"std", "few_uint32<8>", 131072, 2.754, 3.982
+"std", "few_uint32<8>", 262144, 5.638, 8.56
+"std", "few_uint32<8>", 524288, 10.406, 16.566
+"std", "few_uint32<8>", 1048576, 22.299, 34.364
+"std", "random_string<1024>", 1024, 0.173, 0.158
+"std", "random_string<1024>", 2048, 0.394, 0.37
+"std", "random_string<1024>", 4096, 0.751, 0.953
+"std", "random_string<1024>", 8192, 1.628, 2.374
+"std", "random_string<1024>", 16384, 3.936, 6.494
+"std", "random_string<1024>", 32768, 10.39, 19.669
+"std", "random_string<1024>", 65536, 24.596, 47.894
+"std", "random_string<1024>", 131072, 66.455, 72.821
+"std", "random_string<1024>", 262144, 158.78, 194.389
+"std", "random_string<1024>", 524288, 311.285, 488.26
+"std", "random_string<1024>", 1048576, 775.604, 1157.58
+"std", "few_strings<8, 1024>", 1024, 0.557, 0.614
+"std", "few_strings<8, 1024>", 2048, 0.965, 0.9
+"std", "few_strings<8, 1024>", 4096, 2.33, 2.1
+"std", "few_strings<8, 1024>", 8192, 5.433, 5.211
+"std", "few_strings<8, 1024>", 16384, 13.055, 13.623
+"std", "few_strings<8, 1024>", 32768, 31.713, 33.626
+"std", "few_strings<8, 1024>", 65536, 75.838, 69.832
+"std", "few_strings<8, 1024>", 131072, 183.933, 158.994
+"std", "few_strings<8, 1024>", 262144, 418.919, 419.254
+"std", "few_strings<8, 1024>", 524288, 975.281, 983.951
+"std", "few_strings<8, 1024>", 1048576, 2148.43, 2129.16
+"std(par)", "random_uint32", 1024, 0.074, 0.49
+"std(par)", "random_uint32", 2048, 0.09, 0.752
+"std(par)", "random_uint32", 4096, 0.103, 0.063
+"std(par)", "random_uint32", 8192, 0.141, 0.102
+"std(par)", "random_uint32", 16384, 0.214, 0.196
+"std(par)", "random_uint32", 32768, 0.428, 0.448
+"std(par)", "random_uint32", 65536, 0.777, 0.837
+"std(par)", "random_uint32", 131072, 1.566, 1.676
+"std(par)", "random_uint32", 262144, 3.186, 3.446
+"std(par)", "random_uint32", 524288, 6.75, 7.339
+"std(par)", "random_uint32", 1048576, 14.094, 15.415
+"std(par)", "few_uint32<8>", 1024, 0.054, 0.025
+"std(par)", "few_uint32<8>", 2048, 0.068, 0.031
+"std(par)", "few_uint32<8>", 4096, 0.078, 0.043
+"std(par)", "few_uint32<8>", 8192, 0.103, 0.074
+"std(par)", "few_uint32<8>", 16384, 0.144, 0.124
+"std(par)", "few_uint32<8>", 32768, 0.224, 0.25
+"std(par)", "few_uint32<8>", 65536, 0.383, 0.457
+"std(par)", "few_uint32<8>", 131072, 0.719, 0.873
+"std(par)", "few_uint32<8>", 262144, 1.346, 1.722
+"std(par)", "few_uint32<8>", 524288, 2.721, 3.482
+"std(par)", "few_uint32<8>", 1048576, 5.765, 7.11
+"std(par)", "random_string<1024>", 1024, 0.162, 0.164
+"std(par)", "random_string<1024>", 2048, 0.207, 0.215
+"std(par)", "random_string<1024>", 4096, 0.339, 0.355
+"std(par)", "random_string<1024>", 8192, 0.549, 0.573
+"std(par)", "random_string<1024>", 16384, 2.96, 1.148
+"std(par)", "random_string<1024>", 32768, 3.05, 3.333
+"std(par)", "random_string<1024>", 65536, 5.662, 5.821
+"std(par)", "random_string<1024>", 131072, 11.641, 12.337
+"std(par)", "random_string<1024>", 262144, 34.867, 31.009
+"std(par)", "random_string<1024>", 524288, 75.391, 89.1
+"std(par)", "random_string<1024>", 1048576, 174.672, 185.444
+"std(par)", "few_strings<8, 1024>", 1024, 0.26, 0.679
+"std(par)", "few_strings<8, 1024>", 2048, 0.369, 0.806
+"std(par)", "few_strings<8, 1024>", 4096, 0.736, 0.771
+"std(par)", "few_strings<8, 1024>", 8192, 1.693, 1.5
+"std(par)", "few_strings<8, 1024>", 16384, 3.027, 3.138
+"std(par)", "few_strings<8, 1024>", 32768, 6.472, 6.376
+"std(par)", "few_strings<8, 1024>", 65536, 13.512, 13.277
+"std(par)", "few_strings<8, 1024>", 131072, 30.255, 29.123
+"std(par)", "few_strings<8, 1024>", 262144, 69.08, 61.881
+"std(par)", "few_strings<8, 1024>", 524288, 132.618, 131.669
+"std(par)", "few_strings<8, 1024>", 1048576, 278.92, 263.08
+"std(par_unseq)", "random_uint32", 1024, 0.072, 0.988
+"std(par_unseq)", "random_uint32", 2048, 0.078, 0.769
+"std(par_unseq)", "random_uint32", 4096, 0.073, 0.079
+"std(par_unseq)", "random_uint32", 8192, 0.145, 0.127
+"std(par_unseq)", "random_uint32", 16384, 0.232, 0.198
+"std(par_unseq)", "random_uint32", 32768, 0.411, 0.39
+"std(par_unseq)", "random_uint32", 65536, 0.766, 0.831
+"std(par_unseq)", "random_uint32", 131072, 1.547, 1.696
+"std(par_unseq)", "random_uint32", 262144, 3.174, 3.498
+"std(par_unseq)", "random_uint32", 524288, 6.797, 7.267
+"std(par_unseq)", "random_uint32", 1048576, 14.37, 15.454
+"std(par_unseq)", "few_uint32<8>", 1024, 0.052, 0.032
+"std(par_unseq)", "few_uint32<8>", 2048, 0.067, 0.03
+"std(par_unseq)", "few_uint32<8>", 4096, 0.078, 0.044
+"std(par_unseq)", "few_uint32<8>", 8192, 0.096, 0.072
+"std(par_unseq)", "few_uint32<8>", 16384, 0.142, 0.131
+"std(par_unseq)", "few_uint32<8>", 32768, 0.228, 0.241
+"std(par_unseq)", "few_uint32<8>", 65536, 0.613, 0.524
+"std(par_unseq)", "few_uint32<8>", 131072, 1.146, 1.011
+"std(par_unseq)", "few_uint32<8>", 262144, 1.747, 1.975
+"std(par_unseq)", "few_uint32<8>", 524288, 2.71, 3.546
+"std(par_unseq)", "few_uint32<8>", 1048576, 6.824, 8.793
+"std(par_unseq)", "random_string<1024>", 1024, 0.126, 0.129
+"std(par_unseq)", "random_string<1024>", 2048, 0.248, 0.239
+"std(par_unseq)", "random_string<1024>", 4096, 0.342, 0.398
+"std(par_unseq)", "random_string<1024>", 8192, 0.541, 0.545
+"std(par_unseq)", "random_string<1024>", 16384, 1.042, 1.402
+"std(par_unseq)", "random_string<1024>", 32768, 3.244, 2.653
+"std(par_unseq)", "random_string<1024>", 65536, 5.437, 5.682
+"std(par_unseq)", "random_string<1024>", 131072, 14.314, 13.085
+"std(par_unseq)", "random_string<1024>", 262144, 39.7, 32.15
+"std(par_unseq)", "random_string<1024>", 524288, 74.214, 75.683
+"std(par_unseq)", "random_string<1024>", 1048576, 174.639, 177.497
+"std(par_unseq)", "few_strings<8, 1024>", 1024, 0.266, 0.672
+"std(par_unseq)", "few_strings<8, 1024>", 2048, 0.397, 0.895
+"std(par_unseq)", "few_strings<8, 1024>", 4096, 0.748, 0.769
+"std(par_unseq)", "few_strings<8, 1024>", 8192, 1.45, 1.55
+"std(par_unseq)", "few_strings<8, 1024>", 16384, 2.953, 3.077
+"std(par_unseq)", "few_strings<8, 1024>", 32768, 6.676, 6.497
+"std(par_unseq)", "few_strings<8, 1024>", 65536, 13.713, 13.489
+"std(par_unseq)", "few_strings<8, 1024>", 131072, 28.846, 28.455
+"std(par_unseq)", "few_strings<8, 1024>", 262144, 68.249, 62.776
+"std(par_unseq)", "few_strings<8, 1024>", 524288, 132.518, 134.861
+"std(par_unseq)", "few_strings<8, 1024>", 1048576, 271.011, 270.774
+"std(unseq)", "random_uint32", 1024, 0.034, 0.044
+"std(unseq)", "random_uint32", 2048, 0.073, 0.091
+"std(unseq)", "random_uint32", 4096, 0.154, 0.198
+"std(unseq)", "random_uint32", 8192, 0.34, 0.42
+"std(unseq)", "random_uint32", 16384, 0.714, 0.92
+"std(unseq)", "random_uint32", 32768, 1.525, 1.962
+"std(unseq)", "random_uint32", 65536, 3.272, 4.141
+"std(unseq)", "random_uint32", 131072, 6.899, 8.827
+"std(unseq)", "random_uint32", 262144, 14.682, 19.017
+"std(unseq)", "random_uint32", 524288, 30.92, 39.432
+"std(unseq)", "random_uint32", 1048576, 67.379, 84.212
+"std(unseq)", "few_uint32<8>", 1024, 0.018, 0.032
+"std(unseq)", "few_uint32<8>", 2048, 0.035, 0.06
+"std(unseq)", "few_uint32<8>", 4096, 0.073, 0.13
+"std(unseq)", "few_uint32<8>", 8192, 0.218, 0.384
+"std(unseq)", "few_uint32<8>", 16384, 0.29, 0.516
+"std(unseq)", "few_uint32<8>", 32768, 0.625, 1.079
+"std(unseq)", "few_uint32<8>", 65536, 1.258, 2.044
+"std(unseq)", "few_uint32<8>", 131072, 2.541, 4.18
+"std(unseq)", "few_uint32<8>", 262144, 5.035, 8.552
+"std(unseq)", "few_uint32<8>", 524288, 10.335, 17.016
+"std(unseq)", "few_uint32<8>", 1048576, 21.869, 35.019
+"std(unseq)", "random_string<1024>", 1024, 0.136, 0.155
+"std(unseq)", "random_string<1024>", 2048, 0.308, 0.375
+"std(unseq)", "random_string<1024>", 4096, 0.779, 0.991
+"std(unseq)", "random_string<1024>", 8192, 1.776, 2.403
+"std(unseq)", "random_string<1024>", 16384, 3.668, 5.199
+"std(unseq)", "random_string<1024>", 32768, 9.128, 14.342
+"std(unseq)", "random_string<1024>", 65536, 22.323, 38.134
+"std(unseq)", "random_string<1024>", 131072, 65.512, 93.434
+"std(unseq)", "random_string<1024>", 262144, 155.684, 180.521
+"std(unseq)", "random_string<1024>", 524288, 333.904, 493.299
+"std(unseq)", "random_string<1024>", 1048576, 735.526, 1241.71
+"std(unseq)", "few_strings<8, 1024>", 1024, 0.351, 0.366
+"std(unseq)", "few_strings<8, 1024>", 2048, 0.943, 0.861
+"std(unseq)", "few_strings<8, 1024>", 4096, 2.264, 2.075
+"std(unseq)", "few_strings<8, 1024>", 8192, 5.286, 5.056
+"std(unseq)", "few_strings<8, 1024>", 16384, 14.075, 14.986
+"std(unseq)", "few_strings<8, 1024>", 32768, 29.764, 31.554
+"std(unseq)", "few_strings<8, 1024>", 65536, 69.549, 76.088
+"std(unseq)", "few_strings<8, 1024>", 131072, 184.216, 152.774
+"std(unseq)", "few_strings<8, 1024>", 262144, 420.917, 406.341
+"std(unseq)", "few_strings<8, 1024>", 524288, 963.358, 1015.78
+"std(unseq)", "few_strings<8, 1024>", 1048576, 2165.14, 2138.37
