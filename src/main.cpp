@@ -19,7 +19,7 @@ struct random_uint32 {
 template <std::uint32_t kinds> //
 struct few_uint32 {
   std::mt19937_64 gen_{9915530857934838174ULL};
-  std::uniform_int_distribution<std::uint32_t> dist_{0, kinds};
+  std::uniform_int_distribution<std::uint32_t> dist_{0, kinds - 1};
   uint32_t operator()() { return dist_(gen_); }
   static std::string name() {
     std::stringstream ss;
