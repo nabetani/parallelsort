@@ -153,23 +153,32 @@ void test(std::ostream &stream) {
   }
 }
 
-template <typename sorter> void run_tests(std::ostream &stream) {
-  test<uint32_t, sorter, random_uint32>(stream);
-  test<uint32_t, sorter, few_uint32<8>>(stream);
-  test<std::string, sorter, random_string<>>(stream);
-  test<std::string, sorter, few_strings<8>>(stream);
+template <typename value_type, //
+          typename sorter,
+          typename generator> //
+void test2() {
+  test<value_type, sorter, generator>(std::cerr); // 練習
+  test<value_type, sorter, generator>(std::cerr); // 練習
+  test<value_type, sorter, generator>(std::cout); // 本番
 }
 
-void test_all(std::ostream &stream) {
-  run_tests<gnu_p_sort>(stream);
-  run_tests<std_sort>(stream);
-  // run_tests<std_sort_exec<seq>>(stream); // C++17(single-thread, no-SIMD)
-  run_tests<std_sort_exec<par>>(stream);       // C++17(muti-thread)
-  run_tests<std_sort_exec<par_unseq>>(stream); // C++17(muti-thread and/or SIMD)
-  run_tests<std_sort_exec<unseq>>(stream);     // C++20(SIMD)
+template <typename sorter> void run_tests() {
+  test2<uint32_t, sorter, random_uint32>();
+  test2<uint32_t, sorter, few_uint32<8>>();
+  test2<std::string, sorter, random_string<>>();
+  test2<std::string, sorter, few_strings<8>>();
+}
+
+void test_all() {
+  run_tests<gnu_p_sort>();
+  run_tests<std_sort>();
+  // run_tests<std_sort_exec<seq>>(); // C++17(single-thread, no-SIMD)
+  run_tests<std_sort_exec<par>>();       // C++17(muti-thread)
+  run_tests<std_sort_exec<par_unseq>>(); // C++17(muti-thread and/or SIMD)
+  run_tests<std_sort_exec<unseq>>();     // C++20(SIMD)
 }
 
 int main() {
-  test_all(std::cerr); // 練習
-  test_all(std::cout); // 本番
+  //
+  test_all();
 }
